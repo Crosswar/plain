@@ -5,7 +5,7 @@ class M_db extends CI_Model
     {
         $this->db->select();
         $this->db->from('posts');
-        $this->db->where('active',1);
+        $this->db->where('active', 1);
         $this->db->order_by('date_added','desc');
         $this->db->limit($number, $start);
         $query = $this->db->get();
@@ -17,11 +17,11 @@ class M_db extends CI_Model
         $query = $this->db->get();
         return $query->num_rows;
     }
-    function get_post($post_id)
+    function get_post($slug)
     {
         $this->db->select();
         $this->db->from('posts');
-        $this->db->where(array('active'=>1,'post_id'=>$post_id));
+        $this->db->where(array('active'=> 1,'slug'=> $slug));
         $this->db->order_by('date_added','desc');
         $query = $this->db->get();
         return $query->first_row('array');

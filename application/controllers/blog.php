@@ -17,35 +17,24 @@ class Blog extends CI_Controller
         $config['base_url'] = base_url().'blog/index/';//url to set pagination
         $config['total_rows'] = $this->m_db->get_post_count();
         $config['per_page'] = 5; 
+        
         $this->pagination->initialize($config); 
         $data['pages'] = $this->pagination->create_links(); //Links of pages
         
-        $class_name = array(
-            'home_class'=>'current', 
-            'login_class' => '', 
-            'register_class' => '',
-            'upload_class'=>'',
-            'contact_class'=>'');
         $this->load->view('blog/header');
         $this->load->view('blog/content', $data);
         $this->load->view('blog/footer');
 
     }
 
-    function post($post_id)//single post page
+    function post($slug)//single post page
     {   
         $this->load->model('m_comment');
-        $data['comments'] = $this->m_comment->get_comment($post_id);    
-        $data['post'] = $this->m_db->get_post($post_id);
-        $class_name = array(
-            'home_class'=>'current', 
-            'login_class' =>'', 
-            'register_class' => '',
-            'upload_class'=>'',
-            'contact_class'=>'');
-        $this->load->view('header',$class_name);
-        $this->load->view('v_single_post',$data);
-        $this->load->view('footer');
+        $data['comments'] = $this->m_comment->get_comment($slug);    
+
+        $data['post'] = $this->m_db->get_post($slug);
+                
+        $this->load->view('blog/header', $data);
     }
     
     function new_post()//Creating new post page
@@ -58,21 +47,17 @@ class Blog extends CI_Controller
         {
             $data = array(
                 'post_title' => $this->input->post('post_title'),
-                'post' => $this->input->post('post'),
+                'content' => $this->input->post('content'),
                 'active' => 1,
+                'slug' => url_title($post_title, 'dash', true),
             );
+            
             $this->m_db->insert_post($data);
             redirect(base_url().'blog/');
         }
-        else{
+        else {
             
-            $class_name = array(
-            'home_class'=>'current', 
-            'login_class' =>'', 
-            'register_class' => '',
-            'upload_class'=>'',
-            'contact_class'=>'');
-            $this->load->view('header',$class_name);
+            $this->load->view('header');
             $this->load->view('v_new_post');
             $this->load->view('footer');
         }
@@ -89,7 +74,7 @@ class Blog extends CI_Controller
         {
             $data = array(
                 'post_title' => $this->input->post('post_title'),
-                'post' => $this->input->post('post'),
+                'content' => $this->input->post('content'),
                 'active' => 1
             );
             $this->m_db->update_post($post_id, $data);
@@ -97,13 +82,7 @@ class Blog extends CI_Controller
         }
         $data['post'] = $this->m_db->get_post($post_id);
         
-        $class_name = array(
-            'home_class'=>'current', 
-            'login_class' =>'', 
-            'register_class' => '',
-            'upload_class'=>'',
-            'contact_class'=>'');
-        $this->load->view('header',$class_name);
+        $this->load->view('header');
         $this->load->view('v_edit_post',$data);
         $this->load->view('footer');
     }

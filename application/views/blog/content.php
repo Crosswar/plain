@@ -37,7 +37,6 @@
     </nav>
 
     <!-- Page Header -->
-    <!-- Set your background image for this header on the line below. -->
     <header class="intro-header">
         <div class="container">
             <div class="row">
@@ -59,15 +58,14 @@
                 
               <?php foreach($posts as $post) { ?>
                 <div class="post-preview">
-                    <a href="post.html">
-
-                        <h2 class="post-title">
-                            <?=$post['post_title'];?>
-                        </h2>
-                        <h3 class="post-subtitle">
-                            Problems look mighty small from 150 miles up
-                        </h3>
-                    </a>
+                  <a href="<?=  base_url()?>blog/post/<?=$post['slug'];?>">
+                    <h2 class="post-title">
+                        <?=$post['post_title'];?>
+                    </h2>
+                    <h3 class="post-subtitle">
+                        Problems look mighty small from 150 miles up
+                    </h3>
+                  </a>
                     <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2014</p>
                 </div>
                 <hr>
