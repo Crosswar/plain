@@ -26,7 +26,9 @@ class Blog extends CI_Controller
             'register_class' => '',
             'upload_class'=>'',
             'contact_class'=>'');
-        $this->load->view('blog/home', $data);
+        $this->load->view('blog/header');
+        $this->load->view('blog/content', $data);
+        $this->load->view('blog/footer');
 
     }
 

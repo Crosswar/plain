@@ -9,8 +9,8 @@ class Home extends CI_Controller
     
     function index($start = 0)//index page
     {
-        $this->load->view('header');
-        $this->load->view('v_home');
-        $this->load->view('footer');
+        $this->load->view('main/header');
+        $this->load->view('main/content');
+        $this->load->view('main/footer');
     }
 }

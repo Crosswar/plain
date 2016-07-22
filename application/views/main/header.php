@@ -4,15 +4,17 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <title>Plain Healing | Help for Everyone</title>
+
     <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="<?= base_url()?>public/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="<?= base_url()?>public/css/shared/bootstrap.min.css" />
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     
-    <link rel="stylesheet" type="text/css" href="<?= base_url()?>public/css/flexslider.css" />
-    <link rel="stylesheet" type="text/css" href="<?= base_url()?>public/css/styles.css" />
-    <link rel="stylesheet" type="text/css" href="<?= base_url()?>public/css/queries.css" />
-    <link rel="stylesheet" type="text/css" href="<?= base_url()?>public/css/animate.css" />
+    <link rel="stylesheet" type="text/css" href="<?= base_url()?>public/css/shared/flexslider.css" />
+    <link rel="stylesheet" type="text/css" href="<?= base_url()?>public/css/main/main.css" />
+    <link rel="stylesheet" type="text/css" href="<?= base_url()?>public/css/shared/queries.css" />
+    <link rel="stylesheet" type="text/css" href="<?= base_url()?>public/css/shared/animate.css" />
         <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
