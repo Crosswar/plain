@@ -59,6 +59,7 @@
               <div class="col-md-12">
                 <ul class="social-buttons">
                   <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#" class="social-btn"><i class="fa fa-facebook"></i></a></li>
                 </ul>
               </div>
             </div>
