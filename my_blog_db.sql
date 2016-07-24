@@ -57,6 +57,7 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `date_added` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `user_id` int(11) NOT NULL,
   `slug` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `post_headline` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`post_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
@@ -64,10 +65,10 @@ CREATE TABLE IF NOT EXISTS `posts` (
 -- Dumping data for table `posts`
 --
 
-INSERT INTO `posts` (`post_id`, `post_title`, `content`, `active`, `date_added`, `user_id`, `slug`) VALUES
-(1, 'Post 1', 'This is a demo post. This post is just only to test the functionality of the blog. If this post works properly then I could say that I am done for today. Thank you my dear.', 1, '2014-08-18 11:29:30', 1, 'post-1'),
-(2, 'Post 2', 'This is the 2nd post. This post is to test the insert functionality of my blog. If this method works properly then I can say that I am done with insert. Thanks for being with me.', 1, '2014-08-18 11:50:17', 0, 'post-2'),
-(3, 'Post 3', 'Yahh! It''s working properly. I have done the operation of CRUD on database. I feel really cool with codeigniter. This framework is really very easy to learn for the first time you start.', 1, '2014-08-18 11:50:36', 0, 'post-3');
+INSERT INTO `posts` (`post_id`, `post_title`, `content`, `active`, `date_added`, `user_id`, `slug`, `post_headline`) VALUES
+(1, 'Post 1', 'This is a demo post. This post is just only to test the functionality of the blog. If this post works properly then I could say that I am done for today. Thank you my dear.', 1, '2014-08-18 11:29:30', 1, 'post-1', 'This is a headline test. Thanks.'),
+(2, 'Post 2', 'This is the 2nd post. This post is to test the insert functionality of my blog. If this method works properly then I can say that I am done with insert. Thanks for being with me.', 1, '2014-08-18 11:50:17', 0, 'post-2', 'This is a headline test. Thanks.'),
+(3, 'Post 3', 'Yahh! It''s working properly. I have done the operation of CRUD on database. I feel really cool with codeigniter. This framework is really very easy to learn for the first time you start.', 1, '2014-08-18 11:50:36', 0, 'post-3', 'This is a headline test. Thanks.');
 
 -- --------------------------------------------------------
 
