@@ -1,6 +1,6 @@
 <?php
 
-class Blog extends CI_Controller
+class Articles extends CI_Controller
 {
     function __construct()
     {
@@ -14,16 +14,16 @@ class Blog extends CI_Controller
 
         //pagination
         $this->load->library('pagination');
-        $config['base_url'] = base_url().'blog/index/';//url to set pagination
+        $config['base_url'] = base_url().'articles/index/';//url to set pagination
         $config['total_rows'] = $this->m_db->get_post_count();
         $config['per_page'] = 5;
 
         $this->pagination->initialize($config);
         $data['pages'] = $this->pagination->create_links(); //Links of pages
 
-        $this->load->view('blog/header');
-        $this->load->view('blog/content', $data);
-        $this->load->view('blog/footer');
+        $this->load->view('articles/header');
+        $this->load->view('articles/content', $data);
+        $this->load->view('articles/footer');
 
     }
 
@@ -34,9 +34,9 @@ class Blog extends CI_Controller
 
         $data['post'] = $this->m_db->get_post($slug);
 
-        $this->load->view('blog/header');
-        $this->load->view('blog/post', $data);
-        $this->load->view('blog/footer');
+        $this->load->view('articles/header');
+        $this->load->view('articles/post', $data);
+        $this->load->view('articles/footer');
     }
 
     function new_post()//Creating new post page
@@ -55,7 +55,7 @@ class Blog extends CI_Controller
             );
 
             $this->m_db->insert_post($data);
-            redirect(base_url().'blog/');
+            redirect(base_url().'articles/');
         }
         else {
 
@@ -95,7 +95,7 @@ class Blog extends CI_Controller
             redirect(base_url().'users/login');
         }
         $this->m_db->delete_post($post_id);
-        redirect(base_url().'blog/');
+        redirect(base_url().'articles/');
     }
 
     function check_permissions($required)//checking current user's permission

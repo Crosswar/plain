@@ -21,7 +21,7 @@
 
               <?php foreach($posts as $post) { ?>
                 <div class="post-preview">
-                  <a href="<?=  base_url()?>blog/post/<?=$post['slug'];?>">
+                  <a href="<?=  base_url()?>articles/<?=$post['slug'];?>">
                     <h2 class="post-title">
                         <?=$post['post_title'];?>
                     </h2>

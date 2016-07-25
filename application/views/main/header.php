@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <title>Plain Healing | Help for Everyone</title>
 
     <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="<?= base_url()?>public/css/shared/bootstrap.min.css" />
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    
+
     <link rel="stylesheet" type="text/css" href="<?= base_url()?>public/css/shared/flexslider.css" />
     <link rel="stylesheet" type="text/css" href="<?= base_url()?>public/css/main/main.css" />
     <link rel="stylesheet" type="text/css" href="<?= base_url()?>public/css/shared/queries.css" />
@@ -35,9 +35,9 @@
           <div class="col-md-6 col-md-offset-3 text-center">
             <a href="#" class="learn-more-btn">Answers</a>
             <a href="#" class="learn-more-btn" style="background: #ea4d6e;">Campaign</a>
-            <a href="<?=  base_url()?>blog/" class="learn-more-btn">Articles</a>
+            <a href="<?=  base_url()?>articles/" class="learn-more-btn">Articles</a>
           </div>
-        </div>            
+        </div>
       </div>
     </section>
   </header>
