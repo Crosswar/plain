@@ -8,7 +8,7 @@
                     <div class="post-heading">
                         <h1><?=$post['post_title'];?></h1>
                         <h2 class="subheading"><?=$post['post_headline'];?></h2>
-                        <span class="meta">Posted on <?=date ("d F, Y",strtotime($post['date_added']));?></span>
+                        <span class="meta">Posted on <?=date ("F d, Y",strtotime($post['date_added']));?></span>
                     </div>
                 </div>
             </div>

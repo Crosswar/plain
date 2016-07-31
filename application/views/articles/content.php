@@ -29,7 +29,7 @@
                         <?=$post['post_headline'];?>
                     </h3>
                   </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2014</p>
+                    <p class="post-meta">Posted by Staff on <?=date ("F d, Y",strtotime($post['date_added']));?></p>
                 </div>
                 <hr>
               <?php } ?>
