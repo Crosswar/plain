@@ -33,7 +33,7 @@
         </div>
         <div class="row">
           <div class="col-md-6 col-md-offset-3 text-center">
-            <a href="#" class="learn-more-btn">Answers</a>
+            <a href="#" class="learn-more-btn">Questions</a>
             <a href="#" class="learn-more-btn" style="background: #ea4d6e;">Campaign</a>
             <a href="<?=  base_url()?>articles/" class="learn-more-btn">Articles</a>
           </div>
